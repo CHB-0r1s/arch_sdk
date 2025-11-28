@@ -6,7 +6,7 @@ class BluetoothSetup:
         self.pacman = PacmanWrapper()
         self.systemctl = SystemctlWrapper()
     def setup(self):
-        packages = ['bluez', 'bluez-tools', 'pipewire-pulse', 'pulseaudio-bluetooth']
+        packages = ['bluez', 'bluez-tools', 'pipewire-pulse', 'blueman']
         self.pacman.install_batch(packages)
         
         self.systemctl.enable('bluetooth.service')

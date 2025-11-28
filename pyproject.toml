@@ -17,3 +17,9 @@ bluetooth_setup = "bluetooth_setup:main"
 [tool.setuptools]
 py-modules = ["bluetooth_setup", "arch_wrappers"]
 
+# [project.scripts]
+# bluetooth_setup = "venv_manager:main"
+
+# [tool.setuptools]
+# py-modules = ["bluetooth_setup", "arch_wrappers", "venv_manager"]
+
