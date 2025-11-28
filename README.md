@@ -7,21 +7,13 @@
 ### Установка напрямую с GitHub:
 
 ```bash
-pip install git+https://github.com/CHB-0r1s/bluetooth_setup.git
+pip install git+https://github.com/CHB-0r1s/arch_sdk.git
 ```
 
 ### Установка конкретной версии (релиз):
 
 ```bash
-pip install git+https://github.com/ВАШ_USERNAME/bluetooth_setup.git@v0.1.0
-```
-
-### Установка в режиме разработки:
-
-```bash
-git clone https://github.com/ВАШ_USERNAME/bluetooth_setup.git
-cd bluetooth_setup
-pip install -e .
+pip install git+https://github.com/CHB-0r1s/arch_sdk.git@v0.1.1
 ```
 
 ## Использование
@@ -47,7 +39,3 @@ pip install tomli
 # Запустите проверку
 python3 check_pacman_deps.py
 ```
-
-### CI/CD
-
-При каждом push и pull request автоматически запускается проверка через GitHub Actions. Workflow использует Docker контейнер с Arch Linux для проверки доступности пакетов в pacman репозиториях.
