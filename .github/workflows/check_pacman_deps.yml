@@ -1,0 +1,30 @@
+name: Check Pacman Dependencies
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  check-dependencies:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Check dependencies against pacman
+      run: |
+        docker run --rm \
+          -v ${{ github.workspace }}:/workspace \
+          -w /workspace \
+          archlinux:latest \
+          bash -c "
+            pacman -Sy --noconfirm
+            pacman -S --noconfirm python python-pip --noconfirm
+            python3 -m pip install tomli --break-system-packages
+            python3 check_pacman_deps.py
+          "
+

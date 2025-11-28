@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bluetooth_setup"
+version = "0.1.0"
+description = "Python sdk tool for Arch Linux"
+dependencies = [
+    "tqdm>=4.67.1",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+bluetooth_setup = "bluetooth_setup:main"
+
