@@ -14,3 +14,6 @@ dependencies = [
 [project.scripts]
 bluetooth_setup = "bluetooth_setup:main"
 
+[tool.setuptools]
+py-modules = ["bluetooth_setup", "arch_wrappers"]
+
