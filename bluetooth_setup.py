@@ -10,7 +10,7 @@ class BluetoothSetup:
         self.pacman.install_batch(packages)
         
         self.systemctl.enable('bluetooth.service')
-        self.systemctl.start('pulseaudio-bluetooth.service')
+        self.systemctl.start('bluetooth.service')
 
 
 def main():
